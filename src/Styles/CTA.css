@@ -1,0 +1,88 @@
+/* CTA.css */
+
+.cta-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1E2348;
+    color: #fff;
+    padding: 3rem 5rem 3rem 5rem;
+  }
+  
+  .cta-content {
+    text-align: left;
+    max-width: 70%;
+  }
+  
+  .cta-content h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+  }
+  
+  .cta-content p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .cta-button button {
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button button:hover {
+    background-color:green; /* Darker blue background on hover */
+    color: #fff;
+  }
+  
+  /* Mobile and Tablet Media Query */
+@media (max-width: 768px) {
+  .cta-container {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    padding: 2rem; /* Adjust padding for mobile */
+    text-align: center; /* Center align text for better readability */
+  }
+
+  .cta-content {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    font-size: 20px; /* Reduce heading size for mobile */
+  }
+
+  .cta-content p {
+    font-size: 14px; /* Reduce paragraph size */
+  }
+
+  .cta-button button {
+    font-size: 14px; /* Adjust button font size */
+    padding: 8px 16px; /* Adjust button padding */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cta-container {
+    padding: 2.5rem 4rem; /* Adjust padding for tablets */
+  }
+
+  .cta-content h2 {
+    font-size: 22px; /* Adjust heading size for tablets */
+  }
+
+  .cta-content p {
+    font-size: 15px; /* Adjust paragraph size for tablets */
+  }
+
+  .cta-button button {
+    font-size: 15px; /* Adjust button font size for tablets */
+    padding: 9px 18px; /* Adjust button padding for better fit */
+  }
+}

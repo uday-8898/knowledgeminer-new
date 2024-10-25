@@ -1,0 +1,353 @@
+/* Global styles for dark theme */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .timeline-main {
+    /* width: 96%; */
+    padding: 25px;
+    background-image: url(../assets/stepsbgimag.png);
+    background-size: cover; /* Ensures the image covers the entire width */
+    background-position:top; /* Positions the background image to the top-left corner */
+    color: #e0e0e0;
+    /* width: 100%; */
+    margin: 0 auto;
+  }
+  
+  .timeline-section-heading {
+    text-align: center;
+    font-size: 32px;
+    color: #ffffff;
+  }
+  
+  .timeline-section-subheading {
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 70px;
+  }
+
+  .timeline-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 100%;
+  }
+  
+  .timeline-wrap::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: calc(100% - 10px);
+    background-color: #e0e0e0;
+    animation: line 5s linear;
+  }
+  
+  @media (max-width: 767px) {
+    .timeline-wrap::before {
+      left: 95%;
+    }
+  }
+  
+  .timeline-card {
+    width: 50%;
+    margin-right: auto;
+    position: relative;
+    max-width: 100%;
+  }
+  
+  @media (max-width: 767px) {
+    .timeline-card {
+      width: 95%;
+    }
+  }
+  
+  .timeline-card::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #0d0d0d;
+    background: #e0e0e0;
+    animation: fadeIn 1.5s;
+    animation-fill-mode: both;
+  }
+  
+  .timeline-card-wrap {
+    height: 100%;
+    margin-right: 35px;
+    background: linear-gradient(145deg, #222222, #1c1c1c); /* Dark gradient */
+    border-radius: 15px;
+    position: relative;
+    padding: 30px;
+    max-width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Soft shadow */
+    animation: fadeInRight 2.5s;
+    animation-fill-mode: both;
+  }
+  
+  @media (max-width: 767px) {
+    .timeline-card-wrap {
+      padding: 20px;
+      margin-right: 0;
+    }
+  }
+  
+  .timeline-card-wrap::before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: -8px;
+    height: 8px;
+    width: calc(100% - 60px);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px 5px 0 0;
+    opacity: 0.5;
+  }
+  
+  .timeline-card-wrap::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    background-color: #1c1c1c;
+    border-radius: 5px;
+    transform: rotate(45deg);
+  }
+  
+  .card-head-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 1199px) {
+    .card-head-wrap {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+  
+  .timeline-card-head {
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 600;
+    color: #f8f8f8; /* Bright white for contrast */
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 767px) {
+    .timeline-card-head {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  
+  .timeline-card-subhead {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #b3b3b3; /* Soft gray for subhead */
+    margin-bottom: 0;
+    font-style: italic;
+  }
+  
+  @media (max-width: 767px) {
+    .timeline-card-subhead {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+  
+  .timeline-card-text {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #d1d1d1; /* Light gray for text */
+    margin: 25px 0 0;
+  }
+  
+  @media (max-width: 767px) {
+    .timeline-card-text {
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+  
+  .timeline-card:nth-child(even) {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .timeline-card:nth-child(even)::after {
+      right: unset;
+      left: -10px;
+      animation-delay: 2.6s;
+    }
+  
+    .timeline-card:nth-child(even) .timeline-card-wrap {
+      margin-right: 0;
+      margin-left: 35px;
+      animation: fadeInLeft 2.5s;
+      animation-fill-mode: both;
+      animation-delay: 2.5s;
+    }
+  
+    .timeline-card:nth-child(even) .timeline-card-wrap::after {
+      right: unset;
+      left: -8px;
+      border-right: 10px solid #1c1c1c;
+    }
+  }
+  
+  /* Animation keyframes */
+  @keyframes line {
+    0% {
+      height: 0;
+    }
+  
+    100% {
+      height: calc(100% - 10px);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Tablet View */
+@media (max-width: 1024px) {
+  .timeline-main {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .timeline-section-heading {
+    font-size: 28px; /* Slightly smaller heading */
+  }
+
+  .timeline-section-subheading {
+    font-size: 18px; /* Smaller subheading */
+  }
+
+  .timeline-wrap {
+    gap: 20px; /* Reduce gap between items */
+  }
+
+  .timeline-card {
+    width: 80%; /* Make cards wider */
+    margin-right: auto;
+  }
+
+  .timeline-card-wrap {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .card-head-wrap {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start;
+    gap: 5px; /* Smaller gap */
+  }
+
+  .timeline-card-head {
+    font-size: 24px; /* Smaller card heading */
+  }
+
+  .timeline-card-subhead {
+    font-size: 14px; /* Smaller subhead */
+  }
+
+  .timeline-card-text {
+    font-size: 12px; /* Smaller text */
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .timeline-main {
+    padding: 15px;
+    width: 21.4rem;
+  }
+
+  .why-container {
+    margin-top: 0 !important;
+   }
+
+  .timeline-section-heading {
+    font-size: 24px; /* Smaller heading for mobile */
+  }
+
+  .timeline-section-subheading {
+    font-size: 16px; /* Smaller subheading */
+  }
+
+  .timeline-wrap {
+    gap: 15px; /* Further reduce gap between items */
+  }
+
+  .timeline-card {
+    width: 95%; /* Make cards nearly full-width */
+  }
+
+  .timeline-card-wrap {
+    padding: 15px; /* Adjust padding */
+  }
+
+  .card-head-wrap {
+    flex-direction: column; /* Ensure stack on mobile */
+  }
+
+  .timeline-card-head {
+    font-size: 20px; /* Smaller heading */
+  }
+
+  .timeline-card-subhead {
+    font-size: 12px; /* Smaller subhead */
+  }
+
+  .timeline-card-text {
+    font-size: 10px; /* Smaller text */
+  }
+}

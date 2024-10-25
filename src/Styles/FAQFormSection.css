@@ -1,0 +1,188 @@
+.faq-form-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #0d0d0d; /* Dark background color */
+  padding: 20px;
+  color: #ffffff;
+}
+
+.faq-section {
+  flex: 1;
+}
+
+.faq-section ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.faq-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center; /* Center align the heading */
+}
+
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: #1E2348; /* Dark background for header */
+  color: #ffffff; /* White text color */
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.faq-header:hover {
+  background-color: #004d6f; /* Slightly lighter on hover */
+}
+
+.faq-question {
+  font-size: 18px;
+}
+
+.faq-toggle {
+  font-size: 24px;
+}
+
+.faq-answer {
+  background-color: #1e1e1e; /* Slightly lighter dark background for answers */
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 5px;
+  line-height: 25px;
+}
+
+.form-section {
+  flex: 1;
+  background-color: #1E2348; /* Dark background color for form */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.form-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center; /* Center align the heading */
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.form-section input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1e1e1e; /* Slightly lighter dark background for inputs */
+  color: #ffffff;
+}
+
+.form-section button {
+  background-color: #fff;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 900;
+  font-size: 17px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-section button:hover {
+  background-color:green; /* Darker blue background on hover */
+  color: #fff;}
+
+.important {
+  color: red; /* Color for important fields */
+}
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .faq-form-section {
+    flex-direction: column; /* Stack sections vertically */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .form-section {
+    width: 89% !important;
+  }
+
+  .faq-section,
+  .form-section {
+    flex: none; /* Reset flex for stacking */
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Space between sections */
+  }
+
+  .faq-section h2,
+  .form-section h2 {
+    font-size: 22px; /* Slightly smaller heading */
+  }
+
+  .faq-question {
+    font-size: 16px; /* Smaller question text */
+  }
+
+  .faq-toggle {
+    font-size: 20px; /* Smaller toggle icon */
+  }
+
+  .form-section label {
+    font-size: 14px; /* Smaller label */
+  }
+
+  .form-section input {
+    padding: 8px; /* Adjust input padding */
+  }
+
+  .form-section button {
+    font-size: 14px; /* Smaller button text */
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .faq-form-section {
+    padding: 10px; /* Adjust padding for mobile */
+  }
+
+  .faq-section h2,
+  .form-section h2 {
+    font-size: 20px; /* Smaller heading for mobile */
+  }
+
+  .faq-question {
+    font-size: 14px; /* Smaller question text */
+  }
+
+  .faq-toggle {
+    font-size: 18px; /* Smaller toggle icon */
+  }
+
+  .form-section label {
+    font-size: 12px; /* Smaller label */
+  }
+
+  .form-section input {
+    padding: 8px; /* Adjust input padding */
+  }
+
+  .form-section button {
+    font-size: 14px; /* Smaller button text */
+  }
+}

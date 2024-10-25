@@ -1,0 +1,199 @@
+/* Top bar styles */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #4A56E2, #6E7CFF);
+  color: white;
+  padding: 10px 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.logo a:hover {
+  color: #f0f0f0; /* Slight change on hover for a subtle effect */
+}
+
+.top-bar .left-info span, 
+.top-bar .right-info span {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar .left-info span svg, 
+.top-bar .right-info svg {
+  margin-right: 5px;
+}
+
+.right-info {
+  display: flex;
+  align-items: center;
+}
+
+.right-info svg {
+  margin-left: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.right-info svg:hover {
+  transform: scale(1.2);
+}
+
+.left-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Navbar styles */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1E2348;
+  padding: 30px 50px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.25);
+}
+
+.main-nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  left: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Desktop nav-links */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #4A56E2;
+  text-shadow: 2px 2px 4px rgba(74, 86, 226, 0.5);
+  transform: scale(1.1);
+}
+
+/* Hamburger Menu */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 50px;
+}
+
+/* Get Started Button */
+.get-started-btn {
+  background-color: #4A56E2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  right: 50px;
+  box-shadow: 0 4px 8px rgba(74, 86, 226, 0.4);
+  transition: all 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background-color: green;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(74, 86, 226, 0.6);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top-bar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-right: -2.6rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: #1E2348;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+    z-index: 999;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .get-started-btn {
+    display: none;
+  }
+
+  .main-nav .logo {
+    margin-bottom: 10px;
+    margin-left: -2.7rem;
+    font-size: 17px;
+  }
+}
+
+/* For desktop view */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    text-align: left;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .get-started-btn {
+    display: block;
+  }
+}
